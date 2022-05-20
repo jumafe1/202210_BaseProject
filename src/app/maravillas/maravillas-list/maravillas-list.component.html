@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row" style="background-color: rgb(0, 195, 255);">
+
+      <h1>
+          <img src="https://www.worldatlas.com/r/w768/upload/9e/4e/a3/7-wonders-of-the-world-005.jpeg"
+              class="img-fluid" alt="Responsive image" >
+          The seven wonders
+      </h1>
+  </div>
+  <br>
+  <div class="row">
+      <div class="col-6">
+          <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">id</th>
+                  <th scope="col">name</th>
+                  <th scope="col">country</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let s of maravillas" (click) = "onSelectSerie(m)">
+                  <td>
+                    <dd>{{m.id}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{m.name}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{m.country}}</dd>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+      <div class="col-6">
+      <div *ngIf = "selected">
+        <app-maravillas-detail [maravillaDetail] = selectMaravilla></app-maravillas-detail>
+      </div>
+      </div>
+  </div>
+</div>
+
