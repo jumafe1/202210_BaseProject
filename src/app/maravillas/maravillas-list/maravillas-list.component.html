@@ -13,14 +13,13 @@
           <table class="table">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
                   <th scope="col">id</th>
                   <th scope="col">name</th>
                   <th scope="col">country</th>
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let s of maravillas" (click) = "onSelectSerie(m)">
+                <tr *ngFor="let m of maravillas" (click) = "onSelectSerie(m)">
                   <td>
                     <dd>{{m.id}}</dd>
                   </td>
